@@ -1,23 +1,20 @@
-"""Join lists with a separator between them."""
+"""Combine lists with a separator between each pair."""
 
 
 def join(*lists, sep="-"):
-    """Return a combined list, or None when no lists are provided."""
+    """Return a new combined list, or None when no lists are supplied."""
     if not lists:
         return None
-
     result = []
-    for index, current_list in enumerate(lists):
-        if index > 0:
+    for index, current in enumerate(lists):
+        if index:
             result.append(sep)
-        result.extend(current_list)
-
+        result.extend(current)
     return result
+
+
+cup_of_join = join
 
 
 if __name__ == "__main__":
     print(join([1, 2], [8], [9, 5, 6], sep="@"))
-    print(join([1, 2], [8], [9, 5, 6]))
-    print(join([1]))
-    print(join())
-    
