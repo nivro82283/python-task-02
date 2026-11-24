@@ -4,7 +4,7 @@ import datetime
 import random
 
 
-def no_vinnigret(start_date, end_date):
+def no_vinnigrete(start_date, end_date):
     """
     Return a random date between the given dates, including both ends.
 
@@ -29,7 +29,7 @@ def main():
     end_date = input("Enter end date (YYYY-MM-DD): ")
 
     try:
-        chosen_date = no_vinnigret(start_date, end_date)
+        chosen_date = no_vinnigrete(start_date, end_date)
     except ValueError as error:
         print(f"Invalid input: {error}")
         return
